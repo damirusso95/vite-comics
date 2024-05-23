@@ -32,11 +32,11 @@ export default {
 <!-- qui va html -->
 <template>
   <!-- RICHIAMO L'HEADER -->
-  <AppHeader/>
+  <AppHeader />
   <!-- RICHIAMO IL MAIN -->
-  <AppMain/>
+  <AppMain />
   <!-- RICHIAMO IL FOOTER -->
-  <AppFooter/>
+  <AppFooter />
 
 
 </template>
