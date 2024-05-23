@@ -32,7 +32,7 @@ export default {
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <!-- IMMAGINE LOGO -->
-                    <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    <img src="../assets/img/dc-logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 </a>
                 <!-- LINKS NAVBAR CON V-FOR -->
                 <a href="" v-for="link in links">{{ link }}</a>
