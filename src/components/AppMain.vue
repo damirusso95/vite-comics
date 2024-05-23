@@ -3,37 +3,43 @@
 export default {
     data() {
         return {
-            
+
             cards: [
                 {
-                    image: ,
+                    image:"buy-comics-digital-comics.png",
                     text: "prova"
                 },
                 {
-                    image: ,
+
                     text: "prova"
                 },
                 {
-                    image: ,
+
                     text: "prova"
                 },
                 {
-                    image: ,
+
                     text: "prova"
                 },
                 {
-                    image: ,
+
                     text: "prova"
                 },
                 {
-                    image: ,
+
                     text: "prova"
                 }
-                
+
             ]
 
         }
 
+    },
+    methods: {
+        GetImage: function (img) {
+            return new URL('../assets/img/${img}', import.meta.url).href;
+
+        }
     }
 }
 </script>
@@ -48,9 +54,11 @@ export default {
                 </div>
             </div>
             <!-- RIGA IMMAGINE + TESTO -->
-            <div class="row">
+            <div class="row blu">
                 <div v-for="card in cards" class="col-2">
-                    <div>{{card.text}}</div>
+                    <div>{{ card.text }} immagine
+                       
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,5 +70,9 @@ export default {
 main {
     background-color: black;
     color: white;
+}
+.blu{
+    background-color: blue;
+    padding: 4rem 0;
 }
 </style>
