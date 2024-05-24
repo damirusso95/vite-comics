@@ -28,18 +28,44 @@ export default {
     <!-- CONTENITORE HEADER -->
     <header>
         <!-- NAVBAR HEADER -->
-        <nav class="navbar navbar-light bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+        <nav class="col">
+            <div class="row boxed">
+                <div class="col-2">
                     <!-- IMMAGINE LOGO -->
-                    <img src="../assets/img/dc-logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                </a>
-                <!-- LINKS NAVBAR CON V-FOR -->
-                <a href="" v-for="link in links">{{ link }}</a>
+                    <img class="logo" src="../assets/img/dc-logo.png">
+                </div>
+                <div class="col-1 container-links">
+                    <a href="" v-for="link in links">{{ link }}</a>
+                </div>
             </div>
+
+
         </nav>
 
     </header>
 </template>
 
-<style></style>
+<style>
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 70px;
+    padding: 1rem 0;
+}
+
+.container-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    padding: 1rem;
+    font-size: 10px;
+    text-decoration: none;
+}
+</style>

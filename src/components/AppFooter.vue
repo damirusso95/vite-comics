@@ -21,36 +21,51 @@ export default {
 
 <template>
     <footer>
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid bg-footer">
+            <div class="container">
+                <div class="row">
 
-                <div class="col-2">
-                    <h2>DC comics</h2>
-                    <ul v-for="linkFooter in linksFooter">
-                        <li>
-                            {{ linkFooter }}
-                        </li>
-                    </ul>
+                    <div class="col-2">
+                        <h2>DC comics</h2>
+                        <ul v-for="linkFooter in linksFooter">
+                            <li>
+                                {{ linkFooter }}
+                            </li>
+                        </ul>
 
+                    </div>
+                    <div class="col-2">
+                        <h2>DC</h2>
+                        <ul v-for="linkFooter in linksFooter">
+                            <li>
+                                {{ linkFooter }}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h2>Sites</h2>
+                        <ul v-for="linkFooter in linksFooter">
+                            <li>
+                                {{ linkFooter }}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-2">
-                    <h2>DC</h2>
-                    <ul v-for="linkFooter in linksFooter">
-                        <li>
-                            {{ linkFooter }}
-                        </li>
-                    </ul>
+            </div>
+        </div>
+        <div class="container-fluid last">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <button>SING-UP NOW!</button>
+                    </div>
+                    <div class="col-3">
+                        <h2>FOLLOW US</h2>
+                    </div>
+                    <div class="col-3">
+                        immagini
+                    </div>
                 </div>
-                <div class="col-2">
-                    <h2>Sites</h2>
-                    <ul v-for="linkFooter in linksFooter">
-                        <li>
-                            {{ linkFooter }}
-                        </li>
-                    </ul>
-                </div>
-
-
             </div>
         </div>
     </footer>
@@ -61,7 +76,7 @@ footer {
     color: aliceblue;
 }
 
-.container-fluid {
+.bg-footer {
     background-image: url(../assets/img/footer-bg.jpg);
     height: 350px;
 }
@@ -69,5 +84,10 @@ footer {
 ul {
     list-style: none;
     padding: 0;
+}
+
+.last {
+    background-color: darkgray;
+    color: aliceblue;
 }
 </style>

@@ -6,7 +6,7 @@ export default {
 
             cards: [
                 {
-                    image:"buy-comics-digital-comics.png",
+                    image: "dc-logo.png",
                     text: "prova"
                 },
                 {
@@ -36,10 +36,10 @@ export default {
 
     },
     methods: {
-        GetImage: function (img) {
-            return new URL('../assets/img/${img}', import.meta.url).href;
-
-        }
+        getImg(path) {
+            let risultato = new URL("../assets/img/" + path, import.meta.url);
+            return risultato.href;
+        },
     }
 }
 </script>
@@ -47,6 +47,7 @@ export default {
 <template>
     <main>
         <div class="container-fluid">
+
             <!-- PRIMA RIGA -->
             <div class="row">
                 <div class="col">
@@ -56,11 +57,14 @@ export default {
             <!-- RIGA IMMAGINE + TESTO -->
             <div class="row blu">
                 <div v-for="card in cards" class="col-2">
-                    <div>{{ card.text }} immagine
-                       
+                    <div>{{ card.text }} 
+                        <img :src="getImg(image)" alt="">
+                    
+
                     </div>
                 </div>
             </div>
+
         </div>
     </main>
 
@@ -71,7 +75,8 @@ main {
     background-color: black;
     color: white;
 }
-.blu{
+
+.blu {
     background-color: blue;
     padding: 4rem 0;
 }
