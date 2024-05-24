@@ -4,41 +4,37 @@ export default {
     data() {
         return {
 
+
             cards: [
                 {
-                    image: "dc-logo.png",
-                    text: "prova"
+                    imageName: "buy-comics-digital-comics.png",
+                    text: "Digital comics"
                 },
                 {
-
-                    text: "prova"
+                    imageName: "buy-comics-merchandise.png",
+                    text: "DC merchandaise"
                 },
                 {
-
-                    text: "prova"
+                    imageName: "buy-comics-subscriptions.png",
+                    text: "Subscrition"
                 },
                 {
-
-                    text: "prova"
+                    imageName: "buy-comics-shop-locator.png",
+                    text: "Comic shop locator"
                 },
                 {
-
-                    text: "prova"
-                },
-                {
-
-                    text: "prova"
+                    imageName: "buy-dc-power-visa.svg",
+                    text: "DC power visa"
                 }
-
+                
             ]
 
         }
 
     },
     methods: {
-        getImg(path) {
-            let risultato = new URL("../assets/img/" + path, import.meta.url);
-            return risultato.href;
+        getImage(nomefile) {
+            return new URL(`../assets/img/${nomefile}`, import.meta.url);
         },
     }
 }
@@ -57,11 +53,16 @@ export default {
             <!-- RIGA IMMAGINE + TESTO -->
             <div class="row blu">
                 <div v-for="card in cards" class="col-2">
-                    <div>{{ card.text }} 
-                        <img :src="getImg(image)" alt="">
+                    <div>
+                        <img :src="getImage(card.imageName)" alt="Card Image" />
+                        <span>{{ card.text }} </span>
+                    </div>
+                    
                     
 
-                    </div>
+
+
+
                 </div>
             </div>
 
@@ -75,8 +76,16 @@ main {
     background-color: black;
     color: white;
 }
+img{
+    width: 20%;
+}
+span{
+    padding-left: 1rem;
+}
 
 .blu {
+    justify-content: center;
+    align-items: baseline;
     background-color: blue;
     padding: 4rem 0;
 }
