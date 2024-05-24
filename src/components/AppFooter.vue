@@ -13,8 +13,32 @@ export default {
                 "News"
             ],
 
+            iconFooter: [
+                {
+                   icon: "footer-facebook.png"
+                },
+                {
+                    icon: "footer-periscope.png"
+                },
+                  {
+                    icon: "footer-pinterest.png"
+                }, 
+                   {
+                    icon: "footer-twitter.png"
+                },
+                   {
+                    icon: "footer-youtube.png"
+                }
+                
+            ]
+
         }
 
+    },
+    methods: {
+        getImage(nomefile) {
+            return new URL(`../assets/img/${nomefile}`, import.meta.url);
+        },
     }
 }
 </script>
@@ -63,7 +87,9 @@ export default {
                         <h2>FOLLOW US</h2>
                     </div>
                     <div class="col-3">
-                        immagini
+                        <div v-for="icon in iconFooter">
+                            <img :src="getImage(icon.icon)" />
+                        </div>
                     </div>
                 </div>
             </div>
