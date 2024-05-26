@@ -4,6 +4,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppJumbo from './components/AppJumbo.vue';
 
 
 
@@ -35,6 +36,7 @@ export default {
   <AppHeader />
   <!-- RICHIAMO IL MAIN -->
   <AppMain />
+  <AppJumbo/>
   <!-- RICHIAMO IL FOOTER -->
   <AppFooter />
 
