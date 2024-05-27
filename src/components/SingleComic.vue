@@ -1,35 +1,7 @@
-<!-- componente main -->
-<script>
+<!-- <script>
 export default {
     data() {
         return {
-
-
-            cards: [
-                {
-                    imageName: "buy-comics-digital-comics.png",
-                    text: "Digital comics"
-                },
-                {
-                    imageName: "buy-comics-merchandise.png",
-                    text: "DC merchandaise"
-                },
-                {
-                    imageName: "buy-comics-subscriptions.png",
-                    text: "Subscrition"
-                },
-                {
-                    imageName: "buy-comics-shop-locator.png",
-                    text: "Comic shop locator"
-                },
-                {
-                    imageName: "buy-dc-power-visa.svg",
-                    text: "DC power visa"
-                }
-
-            ],
-
-
             fumetti: [
                 {
                     thumb: "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
@@ -106,95 +78,25 @@ export default {
             ]
 
         }
-
-    },
-
-    methods: {
-        getImage(nomefile) {
-            return new URL(`../assets/img/${nomefile}`, import.meta.url);
-        },
     }
+
 }
+
+
 </script>
 
 <template>
-    <main>
-        <div class="container-fluid">
-
-            <!-- PRIMA RIGA -->
-            <div class="row">
-                <div class="col-12 container-jumbo">
-                    <!-- <img class="img-jumbo" src="../assets/img/jumbotron.jpg" alt=""> -->
-                </div>
-            </div>
-
-            <!-- RIGA CARDS -->
-            <div class="row py-5 boxed">
-                <div v-for="carte in fumetti" class="contenitore-carte col-2">
-                    <div class="prova">
-                        <img class="cards-image" :src="carte.thumb" alt="">
-                        <span class="px-0">{{ carte.series }}</span>
-                    </div>
-                </div>
-
-            </div>
-            <!-- RIGA IMMAGINE + TESTO -->
-            <div class="row blu">
-                <div v-for="card in cards" class="col-2">
-                    <div>
-                        <img :src="getImage(card.imageName)" alt="Card Image" />
-                        <span>{{ card.text }} </span>
-                    </div>
-                </div>
-            </div>
-
+    <div class="contenitore">
+        <div class="card">
+            
         </div>
-    </main>
-
+    </div>
 </template>
 
 <style scoped>
-main {
-    background-color: black;
-    color: white;
-}
-
-.boxed {
-    width: 85%;
-    margin: 0 auto;
-}
-
-img {
-    width: 20%;
-}
-
-.cards-image {
-    margin-top: 2rem;
-    width: 100%;
-    height: 150px;
-}
-
-.prova {
+.card {
     width: 200px;
     height: 200px;
+    background-color: blueviolet;
 }
-
-.container-jumbo {
-    height: 21rem;
-    background-image: url('../assets/img/jumbotron.jpg');
-
-}
-
-.contenitore-carte {}
-
-span {
-    padding-left: 1rem;
-}
-
-.blu {
-    justify-content: center;
-    align-items: baseline;
-    background-color: blue;
-    padding: 4rem 0;
-}
-</style>
+</style> -->

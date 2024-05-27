@@ -9,12 +9,15 @@ import AppJumbo from './components/AppJumbo.vue';
 
 
 
+
 export default {
   // CREO UNA 'LISTA' DI COMPONENTI
   components: {
     AppHeader,
     AppMain,
-    AppFooter
+    AppFooter,
+    AppJumbo,
+
   },
   data() {
     return {
@@ -39,8 +42,6 @@ export default {
   <AppJumbo/>
   <!-- RICHIAMO IL FOOTER -->
   <AppFooter />
-
-
 </template>
 <!-- qui va css -->
 <style></style>
